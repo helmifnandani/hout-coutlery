@@ -32,37 +32,41 @@ const Footer = () => {
                     </div> */}
                     <div>
                         <h4 className="mb-5 text-h3">Online Store</h4>
-                        <Link
-                            target="_blank"
-                            href="https://shopee.co.id/houtcutlery"
-                            className="mb-3 text-body-l"
-                        >
-                            Shopee
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href="https://www.tokopedia.com/houtcutlery"
-                            className="text-body-l"
-                        >
-                            Tokopedia
-                        </Link>
+                        <div className="flex flex-col gap-3">
+                            <Link
+                                target="_blank"
+                                href="https://shopee.co.id/houtcutlery"
+                                className="text-body-l"
+                            >
+                                Shopee
+                            </Link>
+                            <Link
+                                target="_blank"
+                                href="https://www.tokopedia.com/houtcutlery"
+                                className="text-body-l"
+                            >
+                                Tokopedia
+                            </Link>
+                        </div>
                     </div>
                     <div>
                         <h4 className="mb-5 text-h3">Social Media</h4>
-                        <Link
-                            target="_blank"
-                            href="https://www.instagram.com/hout.cutlery/"
-                            className="mb-3 text-body-l"
-                        >
-                            Instagram
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href="https://wa.me/6287702883220?text=Hi! Mau tanya tentang produk"
-                            className="text-body-l"
-                        >
-                            Whatsapp
-                        </Link>
+                        <div className="flex flex-col gap-3">
+                            <Link
+                                target="_blank"
+                                href="https://www.instagram.com/hout.cutlery/"
+                                className="text-body-l"
+                            >
+                                Instagram
+                            </Link>
+                            <Link
+                                target="_blank"
+                                href="https://wa.me/6287702883220?text=Hi! Mau tanya tentang produk"
+                                className="text-body-l"
+                            >
+                                Whatsapp
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
