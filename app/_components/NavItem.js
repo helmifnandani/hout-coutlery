@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { useSidebar } from '../_contexts/SideBarContext'
+import { useSidebar } from '@/app/_contexts/SidebarContext'
 
 const NavItem = ({ children, href, isSidebar }) => {
     const pathname = usePathname()

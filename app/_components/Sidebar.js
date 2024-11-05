@@ -1,5 +1,5 @@
 'use client'
-import { useSidebar } from '../_contexts/SideBarContext'
+import { useSidebar } from '../_contexts/SidebarContext'
 import NavItem from './NavItem'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 

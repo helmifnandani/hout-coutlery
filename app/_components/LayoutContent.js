@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { Outfit } from 'next/font/google'
-import { useSidebar } from '../_contexts/SideBarContext'
+import { useSidebar } from '../_contexts/SidebarContext'
 import Header from './Header'
 import Footer from './Footer'
 import Flower from './Flower'

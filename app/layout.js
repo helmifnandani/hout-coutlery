@@ -1,5 +1,5 @@
 import '@/app/_styles/globals.css'
-import { SidebarProvider } from './_contexts/SideBarContext'
+import { SidebarProvider } from '@/app/_contexts/SidebarContext'
 import LayoutContent from './_components/LayoutContent'
 
 export const metadata = {

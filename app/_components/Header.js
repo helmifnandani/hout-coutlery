@@ -1,14 +1,11 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import Navigation from '@/app/_components/Navigation'
 import Logo from '@/app/_components/Logo'
 import SearchBar from './SearchBar'
 import HamburgerButton from './HamburgerButton'
 import Sidebar from './Sidebar'
-import { useHeader } from '../_contexts/HeaderContext'
-import { UserCircleIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { useHeader } from '@/app/_contexts/HeaderContext'
 
 function Header() {
     const { bannerRef, headerClasses, isClient, isScrolled } = useHeader()

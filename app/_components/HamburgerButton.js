@@ -1,7 +1,7 @@
 'use client'
 
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { useSidebar } from '../_contexts/SideBarContext'
+import { useSidebar } from '@/app/_contexts/SidebarContext'
 
 const HamburgerButton = () => {
     const { toggleSidebar } = useSidebar()
