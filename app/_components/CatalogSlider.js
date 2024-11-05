@@ -1,7 +1,8 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
-import banner1 from '@/app/_images/banner1.jpg'
+// import banner1 from '@/app/_images/banner1.jpg'
+import banner1 from '@/public/banner1.jpg'
 import CatalogItem from './CatalogItem'
 
 import 'swiper/css'

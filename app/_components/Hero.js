@@ -1,4 +1,5 @@
-import banner1 from '@/app/_images/banner1.jpg'
+// import banner1 from '@/app/_images/banner1.jpg'
+import banner1 from '@/public/banner1.jpg'
 import vector1 from '@/app/_images/vector-1.svg'
 import vector2 from '@/app/_images/vector-2.svg'
 import vector3 from '@/app/_images/vector-3.svg'

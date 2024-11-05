@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 import Image from 'next/image'
-import banner1 from '@/app/_images/banner1.jpg'
+// import banner1 from '@/app/_images/banner1.jpg'
+import banner1 from '@/public/banner1.jpg'
 import SocialMediaCard from '../_components/SocialMediaCard'
 import IconInstagram from '../_components/_icons/IconInstagram'
 import IconShopee from '../_components/_icons/IconShopee'
