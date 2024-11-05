@@ -14,7 +14,7 @@ const palatino = localFont({
 })
 const page = () => {
     return (
-        <div className="w-screen overflow-hidden">
+        <div className="">
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] aspect-3x2 w-screen md:aspect-4x1">
                 <Image
                     src={banner1}
