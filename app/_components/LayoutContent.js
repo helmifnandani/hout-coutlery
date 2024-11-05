@@ -25,7 +25,7 @@ const LayoutContent = ({ children }) => {
             <div className="grid flex-1 bg-accent-background">
                 <main className="container mx-auto w-full">
                     <Flower
-                        position={'left-0 top-[75vh]'}
+                        className={'left-0 top-[75vh]'}
                         startEnd={[0, 10000]}
                         endStart={[0, -500]}
                     >
@@ -38,12 +38,12 @@ const LayoutContent = ({ children }) => {
                         </div>
                     </Flower>
                     <Flower
-                        position={'right-0 top-[50vh]'}
+                        className={'right-0 top-[50vh]'}
                         startEnd={[0, 10000]}
                         endStart={['0%', '-50%']}
                     >
                         <div className="absolute bottom-0 right-0">
-                            <Image src={vector2} alt="vector 2" className="" />
+                            <Image src={vector2} alt="vector 2" />
                         </div>
                     </Flower>
                     {children}

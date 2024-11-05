@@ -4,7 +4,8 @@ import NavItem from './NavItem'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 
 const Sidebar = () => {
-    const { isOpenSidebar, toggleSidebar } = useSidebar()
+    const { isOpenSidebar, toggleSidebar, handleClickNavigate } = useSidebar()
+
     return (
         <aside
             className={`fixed left-0 top-0 h-screen w-full overflow-hidden border-r border-white/10 bg-accent-black/70 backdrop-blur-[6px] transition-transform duration-300 ease-in-out ${isOpenSidebar ? '-translate-x-0' : 'translate-x-full'} z-[9999]`}
@@ -39,11 +40,11 @@ const Sidebar = () => {
                                 About
                             </NavItem>
                         </li>
-                        <li className="text-center">
+                        {/* <li className="text-center">
                             <NavItem isSidebar={true} href="/account">
                                 Account
                             </NavItem>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </div>

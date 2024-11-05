@@ -1,23 +1,31 @@
-import Image from 'next/image'
 import React from 'react'
-import banner1 from '@/app/_images/banner1.jpg'
+import { getFooterBanner } from '../_lib/data-service'
+import ImageComponent from './ImageComponent'
+import Link from 'next/link'
 
-const GridItem = ({ children, src }) => {
+const GridItem = async ({ id, linkClass }) => {
+    const data = await getFooterBanner(1)
+    const { name, image, id: catalogId } = data[id]
     return (
         <>
-            <Image
-                src={banner1}
-                fill
-                placeholder="blur"
-                quality={100}
-                className="object-cover"
-                alt="Package 1"
-            />
-            <div className="absolute h-full w-full bg-black opacity-30"></div>
-            <div className="absolute bottom-0 left-0 flex translate-x-6 flex-col items-center justify-center gap-6 text-center">
-                <p className="mb-6 text-h2 text-white lg:text-body-xl">
-                    {children}
-                </p>
+            <ImageComponent src={image} className="object-cover" alt={name} />
+            <Link
+                href={{
+                    pathname: `/products`,
+                    query: { catalog: catalogId },
+                }}
+                className="absolute h-full w-full bg-black opacity-30"
+            ></Link>
+            <div className="absolute bottom-0 left-0 z-40 flex translate-x-6 flex-col items-center justify-center gap-6 text-center">
+                <Link
+                    href={{
+                        pathname: `/products`,
+                        query: { catalog: catalogId },
+                    }}
+                    className="mb-6 text-h2 text-white lg:text-body-xl"
+                >
+                    {name}
+                </Link>
             </div>
         </>
     )

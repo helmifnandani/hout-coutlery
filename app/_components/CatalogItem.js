@@ -1,23 +1,36 @@
-import banner1 from '@/app/_images/banner1.jpg'
+'use client'
 import Image from 'next/image'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import ImageComponent from './ImageComponent'
 
-const CatalogItem = ({ children }) => {
+const CatalogItem = ({ id, children, src, name }) => {
+    const searchParams = useSearchParams()
+    const router = useRouter()
+    const pathname = usePathname()
+
+    const activeFilter = searchParams.get('catalog') ?? 'all'
+
+    const handleFilter = (filter) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('catalog', filter)
+        params.delete('search')
+        router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+    }
     return (
-        <div className="flex-shrink-0 snap-start">
-            <div className="aspect-4x3 relative w-48">
-                <Image
-                    src={banner1}
-                    fill
-                    placeholder="blur"
-                    quality={100}
-                    className="object-cover"
-                    alt="Package 1"
-                />
-                <div className="absolute h-full w-full bg-black opacity-30"></div>
-                <div className="absolute bottom-0 flex w-full -translate-y-4 flex-col items-center justify-center text-center">
-                    {children}
+        <div>
+            <button onClick={() => handleFilter(id)}>
+                <div className="relative aspect-4x3 w-48">
+                    <ImageComponent
+                        src={src}
+                        className="object-cover"
+                        alt={name}
+                    />
+                    <div className="absolute h-full w-full bg-black opacity-30"></div>
+                    <div className="absolute bottom-0 flex w-full -translate-y-4 flex-col items-center justify-center text-center">
+                        {children}
+                    </div>
                 </div>
-            </div>
+            </button>
         </div>
     )
 }

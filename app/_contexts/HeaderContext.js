@@ -48,7 +48,13 @@ function HeaderProvider({ children }) {
   `
 
     return (
-        <HeaderContext.Provider value={{ headerClasses, isScrolled, isClient }}>
+        <HeaderContext.Provider
+            value={{
+                headerClasses,
+                isScrolled,
+                isClient,
+            }}
+        >
             {children}
         </HeaderContext.Provider>
     )

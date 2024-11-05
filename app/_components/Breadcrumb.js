@@ -8,7 +8,7 @@ import React from 'react'
 const Breadcrumb = () => {
     const pathname = usePathname()
     return (
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden bg-white px-6 py-7 md:px-20">
+        <div className="relative w-screen overflow-hidden bg-white px-6 py-7 md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] md:px-20">
             <ol className="inline-flex items-center space-x-1 md:space-x-4">
                 <li className="inline-flex items-center">
                     <Link

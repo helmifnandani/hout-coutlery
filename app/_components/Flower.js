@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 const Flower = ({
     children,
-    position,
+    className,
     startEnd = [0, 10000],
     endStart = [0, -500],
 }) => {
@@ -12,7 +12,7 @@ const Flower = ({
     return (
         <motion.div
             style={{ y }}
-            className={`fixed ${position} z-0 h-[300px] w-[300px] rounded-full`}
+            className={`fixed ${className} z-0 h-[300px] w-[300px] rounded-full`}
         >
             {children}
         </motion.div>

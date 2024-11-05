@@ -33,9 +33,9 @@ function Header() {
                         <Navigation />
                         <div className="flex items-center gap-4">
                             <SearchBar />
-                            <Link href="/account">
+                            {/* <Link href="/account">
                                 <UserCircleIcon className="size-6 text-primary-700" />
-                            </Link>
+                            </Link> */}
                         </div>
                         <div className="md:hidden">
                             <HamburgerButton />
