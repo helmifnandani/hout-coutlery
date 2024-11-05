@@ -6,8 +6,8 @@ import placeholderImg from '@/app/_images/placeholder.png'
 
 const ProductItemCard = ({ product }) => {
     const imgProduct =
-        product.product_images.find((image) => image.is_primary) ||
-        product.product_images[0] ||
+        product?.product_images.find((image) => image.is_primary) ||
+        product?.product_images[0] ||
         placeholderImg
 
     return (
