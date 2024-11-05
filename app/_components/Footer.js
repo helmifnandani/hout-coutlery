@@ -2,6 +2,7 @@ import vectorFooter1 from '@/app/_images/vector-footer-1.svg'
 import vectorFooter2 from '@/app/_images/vector-footer-2.svg'
 import Image from 'next/image'
 import Logo from './Logo'
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -23,21 +24,45 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="flex grid-cols-3 flex-col gap-10 md:grid">
-                    <div>
+                    {/* <div>
                         <h4 className="mb-5 text-h3">Product</h4>
                         <p className="mb-3 text-body-l">Hampers</p>
                         <p className="mb-3 text-body-l">Kitchen Set</p>
                         <p className="text-body-l">Coutlery Set</p>
-                    </div>
+                    </div> */}
                     <div>
                         <h4 className="mb-5 text-h3">Online Store</h4>
-                        <p className="mb-3 text-body-l">Shopee</p>
-                        <p className="text-body-l">Tokopedia</p>
+                        <Link
+                            target="_blank"
+                            href="https://shopee.co.id/houtcutlery"
+                            className="mb-3 text-body-l"
+                        >
+                            Shopee
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href="https://www.tokopedia.com/houtcutlery"
+                            className="text-body-l"
+                        >
+                            Tokopedia
+                        </Link>
                     </div>
                     <div>
                         <h4 className="mb-5 text-h3">Social Media</h4>
-                        <p className="mb-3 text-body-l">Instagram</p>
-                        <p className="text-body-l">Whatsapp</p>
+                        <Link
+                            target="_blank"
+                            href="https://www.instagram.com/hout.cutlery/"
+                            className="mb-3 text-body-l"
+                        >
+                            Instagram
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href="https://wa.me/6287702883220?text=Hi! Mau tanya tentang produk"
+                            className="text-body-l"
+                        >
+                            Whatsapp
+                        </Link>
                     </div>
                 </div>
             </div>
