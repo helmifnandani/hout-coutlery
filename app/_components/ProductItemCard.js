@@ -16,15 +16,15 @@ const ProductItemCard = ({ product }) => {
                 <HeartIcon className="h-5 w-5" />
             </div> */}
             <Link
-                href={`/products/${product.id}`}
-                className={`relative aspect-card-sm w-full overflow-hidden md:aspect-card md:h-96 ${product.status === 'out-of-stock' && 'pointer-events-none'}`}
+                href={`/products/${product?.id}`}
+                className={`relative aspect-card-sm w-full overflow-hidden md:aspect-card md:h-96 ${product?.status === 'out-of-stock' && 'pointer-events-none'}`}
             >
                 <ImageComponent
-                    src={imgProduct.image_url}
+                    src={imgProduct?.image_url}
                     className="object-cover"
-                    alt={product.name}
+                    alt={product?.name}
                 />
-                {product.status === 'out-of-stock' && (
+                {product?.status === 'out-of-stock' && (
                     <>
                         <div className="absolute -right-[30px] top-[25px] z-50 w-36 rotate-45 bg-accent-gray text-body-xl text-white">
                             Sold Out
@@ -36,38 +36,38 @@ const ProductItemCard = ({ product }) => {
             <div className="flex flex-col items-center gap-3">
                 <div className="flex flex-col items-center">
                     <Link
-                        href={`/products/${product.id}`}
-                        className={`text-body-m lg:text-body-xl ${product.status === 'out-of-stock' && 'pointer-events-none text-accent-gray'}`}
+                        href={`/products/${product?.id}`}
+                        className={`text-body-m lg:text-body-xl ${product?.status === 'out-of-stock' && 'pointer-events-none text-accent-gray'}`}
                     >
-                        {product.name}
+                        {product?.name}
                     </Link>
                     <p
-                        className={`${product.status === 'out-of-stock' ? 'text-accent-gray' : 'text-primary-600'} text-body-s lg:text-body-m`}
+                        className={`${product?.status === 'out-of-stock' ? 'text-accent-gray' : 'text-primary-600'} text-body-s lg:text-body-m`}
                     >
-                        {product.price}
+                        {product?.price}
                     </p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <p
-                        className={`${product.status === 'out-of-stock' ? 'text-accent-gray' : 'text-primary-700'} text-body-s lg:text-body-m`}
+                        className={`${product?.status === 'out-of-stock' ? 'text-accent-gray' : 'text-primary-700'} text-body-s lg:text-body-m`}
                     >
                         Available on:
                     </p>
                     <div className="flex gap-2">
                         <Link
                             target="_blank"
-                            href={product.url_shopee || 'http://shopee.co.id/'}
-                            className={`${product.status === 'out-of-stock' ? 'pointer-events-none border-accent-gray text-accent-gray' : 'border-primary-500 text-primary-500'} rounded-3xl border px-3 py-1 text-regular-m md:px-4 md:py-2 lg:text-body-s`}
+                            href={product?.url_shopee || 'http://shopee.co.id/'}
+                            className={`${product?.status === 'out-of-stock' ? 'pointer-events-none border-accent-gray text-accent-gray' : 'border-primary-500 text-primary-500'} rounded-3xl border px-3 py-1 text-regular-m md:px-4 md:py-2 lg:text-body-s`}
                         >
                             Shopee
                         </Link>
                         <Link
                             target="_blank"
                             href={
-                                product.url_tokopedia ||
+                                product?.url_tokopedia ||
                                 'https://tokopedia.co.id'
                             }
-                            className={`${product.status === 'out-of-stock' ? 'pointer-events-none border-accent-gray text-accent-gray' : 'border-primary-500 text-primary-500'} rounded-3xl border px-3 py-1 text-regular-m md:px-4 md:py-2 lg:text-body-s`}
+                            className={`${product?.status === 'out-of-stock' ? 'pointer-events-none border-accent-gray text-accent-gray' : 'border-primary-500 text-primary-500'} rounded-3xl border px-3 py-1 text-regular-m md:px-4 md:py-2 lg:text-body-s`}
                         >
                             Tokopedia
                         </Link>

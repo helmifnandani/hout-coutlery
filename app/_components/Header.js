@@ -6,6 +6,8 @@ import SearchBar from './SearchBar'
 import HamburgerButton from './HamburgerButton'
 import Sidebar from './Sidebar'
 import { useHeader } from '@/app/_contexts/HeaderContext'
+import { Suspense } from 'react'
+import SpinnerMini from './SpinnerMini'
 
 function Header() {
     const { bannerRef, headerClasses, isClient, isScrolled } = useHeader()
@@ -29,7 +31,9 @@ function Header() {
                         </div>
                         <Navigation />
                         <div className="flex items-center gap-4">
-                            <SearchBar />
+                            <Suspense fallback={<SpinnerMini />}>
+                                <SearchBar />
+                            </Suspense>
                             {/* <Link href="/account">
                                 <UserCircleIcon className="size-6 text-primary-700" />
                             </Link> */}
